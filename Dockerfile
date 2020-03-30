@@ -1,6 +1,6 @@
 FROM buildpack-deps:bionic
 
-ARG LANVERSION
+ENV LANVERSION = 0.2.1
 ENV LANSERVICE = "mi.nightc.com:11451"
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
